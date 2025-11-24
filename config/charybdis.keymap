@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -48,12 +49,12 @@
 
         layer_2 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-        &none  &reset       &none  &none  &none  &mkp MB1  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                           &none  &kp LEFT_GUI  &none  &none  &kp RIGHT_SHIFT
-                                  &none  &none  &none
+&none  &none       &none  &none  &none         &none       &none           &none            &none         &none            &none  &none
+&none  &sys_reset  &none  &none  &none         &mkp MB1    &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+&none  &none       &none  &none  &none         &none       &none           &mkp MB1         &mkp MB2      &mkp MB3         &none  &none
+&none  &none       &none  &none  &none         &none       &none           &none            &none         &none            &none  &none
+                          &none  &kp LEFT_GUI  &none       &none           &kp RIGHT_SHIFT
+                                 &none         &none       &none
             >;
         };
 
