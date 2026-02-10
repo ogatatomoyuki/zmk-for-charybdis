@@ -3,15 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <350>;
     flavor = "tap-preferred";
-    quick-tap-ms = <300>;
+    quick-tap-ms = <350>;
     retro-tap;
 };
 
 &mt {
-    tapping-term-ms = <300>;
-    quick-tap-ms = <300>;
+    tapping-term-ms = <350>;
+    quick-tap-ms = <350>;
     flavor = "tap-preferred";
     retro-tap;
 };
