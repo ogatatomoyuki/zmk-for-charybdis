@@ -6,12 +6,14 @@
     tapping-term-ms = <250>;
     flavor = "tap-preferred";
     quick-tap-ms = <250>;
+    retro-tap;
 };
 
 &mt {
     tapping-term-ms = <250>;
     quick-tap-ms = <250>;
     flavor = "tap-preferred";
+    retro-tap;
 };
 
 / {
