@@ -3,17 +3,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <350>;
-    quick-tap-ms = <350>;
-    flavor = "tap-preferred";
-    retro-tap;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    flavor = "balanced";
+    require-prior-idle-ms = <150>;
 };
 
 &mt {
-    tapping-term-ms = <350>;
-    quick-tap-ms = <350>;
-    flavor = "tap-preferred";
-    retro-tap;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    flavor = "balanced";
+    require-prior-idle-ms = <150>;
 };
 
 / {
@@ -39,8 +39,6 @@
                                              &lt 1 LANGUAGE_2  &mt LEFT_COMMAND SPACE  &lt 2 LANGUAGE_1    &lt 3 BACKSPACE  &mt RIGHT_SHIFT ENTER
                                                                &none                   &none               &none
             >;
-
-            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {

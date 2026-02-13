@@ -3,8 +3,9 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include "charybdis.dtsi"
+#include "charybdis_3610.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -21,16 +22,9 @@
 		;
 };
 
-// trackball bus
-&spi0 {
-	status = "okay"; //okay
-	sck-pin = <8>;
-	mosi-pin = <17>;
-	miso-pin = <17>; // same as mosi (3-wire spi)
-	cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
-};
-
-&trackball {
-	status = "okay"; //okay
-	irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
 };
