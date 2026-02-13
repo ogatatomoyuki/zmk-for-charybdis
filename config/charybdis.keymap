@@ -3,13 +3,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    flavor = "tap-unless-interrupted";
+    require-prior-idle-ms = <150>;
 };
 
 &mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    flavor = "tap-unless-interrupted";
+    require-prior-idle-ms = <150>;
 };
 
 / {
