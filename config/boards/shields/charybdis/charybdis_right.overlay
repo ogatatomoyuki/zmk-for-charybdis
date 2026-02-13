@@ -5,7 +5,7 @@
  */
 
 #include "charybdis.dtsi"
-#include "charybdis_3610.dtsi"
+/* トラックボール無効化テスト: #include "charybdis_3610.dtsi" */
 
 &default_transform {
     col-offset = <6>;
@@ -22,9 +22,11 @@
 		;
 };
 
+/* トラックボール無効化テスト
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
     };
 };
+*/
