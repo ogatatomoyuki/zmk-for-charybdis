@@ -157,18 +157,18 @@
 
         // NAV Layer（左内側親指）
         //   ---  ---  ---  ---  ---  --- │  ---  ---  ---  ---  ---  ---
-        //   ---  ESC  SWAP STAB CAPS --- │  HOME PGDN PGUP END  ---  ---
-        //   --- skCTL skSFT skALT skGUI TAB│ LEFT DOWN UP  RGHT ---  ---
-        //   ---  UNDO CUT  COPY PST  --- │  REDO LCLK ZM+  ZM-  ---  ---
+        //   ---  ESC  SWAP STAB CAPS LCLK│  HOME PGDN PGUP END  SCRUP ---
+        //   --- skCTL skSFT skALT skGUI TAB│ LEFT DOWN UP  RGHT SCRDN ---
+        //   ---  UNDO CUT  COPY PST RCLK │  REDO MCLK ZM+  ZM-  ---  ---
         //             ___  ___  ___      │      ___  ___
         //                  ---           │       --- ---
         NAV_layer {
             display-name = "Nav";
             bindings = <
-&none  &none      &none      &none      &none      &none          &none      &none       &none       &none       &none  &none
-&none  &kp ESC    &mc_swap   &mc_tab    &kp CAPS   &none          &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &none  &none
-&none  &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI   &kp TAB        &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &none  &none
-&none  &mc_undo   &mc_cut    &mc_copy   &mc_paste  &none          &mc_redo   &mkp LCLK   &mc_zmin    &mc_zmout   &none  &none
+&none  &none      &none      &none      &none      &none          &none      &none       &none       &none       &none       &none
+&none  &kp ESC    &mc_swap   &mc_tab    &kp CAPS   &mkp LCLK      &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &msc SCRL_UP   &none
+&none  &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI   &kp TAB        &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &msc SCRL_DOWN &none
+&none  &mc_undo   &mc_cut    &mc_copy   &mc_paste  &mkp RCLK      &mc_redo   &mkp MCLK   &mc_zmin    &mc_zmout   &none       &none
                              &trans     &trans     &trans         &trans     &trans
                                         &none                     &none      &none
             >;
