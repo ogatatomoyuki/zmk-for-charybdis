@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/reset.h>
 
 #define BASE 0
 #define NAV  1
@@ -121,20 +120,6 @@
             key-positions = <51 52>;
             bindings = <&kp LANGUAGE_2>;
             layers = <BASE>;
-        };
-
-        // Z(37) + B(41) → Bootloader (左手)
-        combo_boot_left {
-            timeout-ms = <50>;
-            key-positions = <37 41>;
-            bindings = <&bootloader>;
-        };
-
-        // N(42) + /(46) → Bootloader (右手)
-        combo_boot_right {
-            timeout-ms = <50>;
-            key-positions = <42 46>;
-            bindings = <&bootloader>;
         };
     };
 
