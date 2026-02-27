@@ -2,7 +2,7 @@
 
 ## アクティブブランチ
 
-**`migration/official-zmk`** — 必ずこのブランチで作業すること。`main` は古い。
+**`main`** — `migration/official-zmk` はマージ済み・削除済み（2026-02-27）。
 
 ## キーマップファイル
 
