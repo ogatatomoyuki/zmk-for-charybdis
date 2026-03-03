@@ -48,18 +48,17 @@ FUN:  F1-F12, 音量, BT設定（NAV+SYM 同時押し）
 
 ## フラッシュ手順
 
-**重要: `cp` ではなく `dd` を使うこと。**
-
 ```bash
 # フラッシュ順序: 右（マスター）→ 左（ペリフェラル）
 # settings_reset が必要な場合は両側に先に焼いてから本番ファーム
 
 # リセットボタン2回押し → NICENANO ドライブがマウント
-dd if=charybdis_right-nice_nano-zmk.uf2 of=/Volumes/NICENANO/firmware.uf2 bs=4096
-dd if=charybdis_left-nice_nano-zmk.uf2 of=/Volumes/NICENANO/firmware.uf2 bs=4096
+cp charybdis_right-nice_nano-zmk.uf2 /Volumes/NICENANO/
+cp charybdis_left-nice_nano-zmk.uf2 /Volumes/NICENANO/
 ```
 
-- `cp` は書き込みが不完全になる場合がある（2026-02-21 発見）
+- `cp` でも `dd` でもどちらでも可（2026-03-03 確認）
+  - 2026-02-21 時点では `cp` で不完全になるケースがあったが、再検証で問題なし
 - I/O error は device のリブートによるもので正常
 - フラッシュ後に BT 接続が切れた場合:
   1. Mac の Bluetooth 設定で古い「Charybdis Nano」を削除
@@ -76,6 +75,12 @@ gh run download <run_id> -D firmware
 ```
 
 ## 変更履歴
+
+### 2026-03-03
+- 2台目の無線 Charybdis をセットアップ（前機は配線故障）
+- `cp` でのフラッシュが正常動作することを確認、NOTES を修正
+- 新品 nice!nano でも settings_reset → 本番ファームの手順が必要だった
+- 左右間ペアリング: 右（セントラル）先起動 → 左（ペリフェラル）後起動で解決
 
 ### 2026-02-21
 - tmux コンボの timeout を 50ms → 80ms に変更、require-prior-idle-ms 追加
